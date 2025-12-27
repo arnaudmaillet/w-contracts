@@ -1,5 +1,12 @@
+# Project
 .DS_Store
 bin/
 gen/
 node_modules/
 .buf/
+
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
