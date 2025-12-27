@@ -1,0 +1,10 @@
+version: v1
+name: github.com/wynn/contracts
+deps: []
+lint:
+  use:
+    - DEFAULT
+    - PACKAGE_DIRECTORY_MATCH # Force la structure des dossiers
+breaking:
+  use:
+    - FILE # Empêche de supprimer des champs qui casseraient le mobile

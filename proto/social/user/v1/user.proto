@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package social.user.v1;
+
+// Pour la génération Kotlin/Java (Android)
+option java_multiple_files = true;
+option java_package = "com.social.user.v1";
+
+// Pour la génération Go
+option go_package = "github.com/wynn/contracts/gen/go/social/user/v1;userv1";
+
+service UserService {
+  // Récupère un profil utilisateur par son ID
+  rpc GetUserProfile(GetUserProfileRequest) returns (GetUserProfileResponse);
+}
+
+message GetUserProfileRequest {
+  string user_id = 1;
+}
+
+message GetUserProfileResponse {
+  User user = 1;
+}
+
+message User {
+  string id = 1;
+  string username = 2;
+  string bio = 3;
+  string avatar_url = 4;
+  uint32 followers_count = 5;
+}
