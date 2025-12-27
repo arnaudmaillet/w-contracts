@@ -1,10 +1,9 @@
-version: v1
-name: github.com/wynn/contracts
-deps: []
+version: v2
+modules:
+  - path: proto # On dit à Buf que la racine des packages est le dossier 'proto'
 lint:
   use:
-    - DEFAULT
-    - PACKAGE_DIRECTORY_MATCH # Force la structure des dossiers
+    - STANDARD # Remplace DEFAULT (règle l'avertissement de dépréciation)
 breaking:
   use:
-    - FILE # Empêche de supprimer des champs qui casseraient le mobile
+    - FILE
